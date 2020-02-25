@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/loading.css"/>
+    <title>Senate Data</title>
+  </head>
+  <body>
+    <header class="headerbg">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+          <a href="./index.html" class="nav-link"
+            ><img src="./img/method-draw-image.svg"
+          /></a>
+        </div>
+        <div class="d-flex align-items-center mr-5">
+          <a href="mailto:info@tgif.net" class="text-white">info@tgif.net</a>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light navbgcolor">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a href="./index.html" class="nav-link text-white">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle text-white"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Congress 113</a
+            >
+            <div
+              class="dropdown-menu navbgcolor"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a href="./house-data.html" class="dropdown-item navLnk">House</a>
+
+              <a href="./senate-data.html" class="dropdown-item navLnk"
+                >Senate</a
+              >
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle text-white"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Attendance</a
+            >
+            <div
+              class="dropdown-menu navbgcolor"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a href="./house-attendance-starter-page.html" class="dropdown-item navLnk">House</a>
+
+              <a href="./senate-attendance-starter-page.html" class="dropdown-item navLnk"
+                >Senate</a
+              >
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle text-white"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Party Loyalty</a
+            >
+            <div
+              class="dropdown-menu navbgcolor"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a href="./house-party-loyalty-starter-page.html" class="dropdown-item navLnk">House</a>
+
+              <a href="./senate-party-loyalty-starter-page.html" class="dropdown-item navLnk"
+                >Senate</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid container-width mt-5">
+      <h2 class="text-left mb-5">Senators</h2>
+      <p>
+        First convened in 1789, the composition and powers of the Senate are
+        established in Article One of the U.S. Constitution. Each state is
+        represented by two senators, regardless of population, who serve
+        staggered six-year terms. The Senate has several exclusive powers not
+        granted to the House, including consenting to treaties as a precondition
+        to their ratification and consenting to or confirming appointments of
+        Cabinet secretaries, federal judges, other federal executive officials,
+        military officers, regulatory officials, ambassadors, and other federal
+        uniformed officers, as well as trial of federal officials impeached by
+        the House.
+      </p>
+      <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        Filter by Party:
+        <input
+          type="checkbox"
+          name="democ"
+          value="Democrats"
+          id="check1"
+        />Democrats
+        <input
+          type="checkbox"
+          name="repub"
+          value="Republicans"
+          id="check2"
+        />Republicans
+        <input
+          type="checkbox"
+          name="indep"
+          value="Independents"
+          id="check3"
+        />Independents
+      </div>
+      <div>States:
+        <select id="filtersselect">
+          <option value="all">All</option>
+        </select>
+      </div>
+      </div>
+      <table class="table mt-5 font-weight-bold">
+        <thead class="tableth">
+          <tr>
+            <th>FULLNAME</th>
+            <th>PARTY</th>
+            <th>STATE</th>
+            <th>SENIORITY</th>
+            <th>VOTES</th>
+          </tr>
+          <tbody id="senate-data"></tbody>
+        </thead>
+      </table>
+    </div>
+    <div class="container d-flex justify-content-center alert alert-color" role="alert" id="danger">
+        <img
+        src="./img/method-draw-image.svg"
+        style="width: 6%"
+        class="ld ld-vortex-out"
+        id="loader"
+      />
+    </div>
+    <footer>
+      <div class="footerbg d-flex align-items-center justify-content-center">
+        © 2016 Copyrigh || All Rights Reserved
+      </div>
+    </footer>
+    <script src="./js/senate.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

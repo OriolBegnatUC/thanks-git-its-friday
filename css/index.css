@@ -1,0 +1,82 @@
+#more {
+  display: none;
+}
+
+.headerbg {
+  background-color: #b31c31;
+}
+
+.container-width {
+  width: 86%;
+}
+
+.main-tm {
+  background-image: url(https://media.giphy.com/media/ZLpVNgQHN2d4Q/giphy.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tableth {
+  background-color: #39386e;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #c2c2c2;
+}
+
+.tablemb {
+  margin-bottom: 100px;
+}
+
+.navbgcolor {
+  background-color: #39386e;
+}
+
+.nav-color {
+  color: white;
+}
+
+.spinner-size {
+  color: #b31c31;
+}
+.alert-color {
+  background-color: #b31c31;
+  color: white;
+}
+
+.footerbg {
+  background-color: #b31c31;
+  color: white;
+  height: 50px;
+}
+
+.buttnRead {
+  padding: 3px 10px;
+  border-radius: 6px;
+  background-color: white;
+  border-color: #b31c31;
+  color: #b31c31;
+  font-weight: bold;
+}
+
+button.buttnRead:hover {
+  border-radius: 6px;
+  background-color: #b31c31;
+  border-color: #b31c31;
+  color: white;
+}
+
+.navLnk {
+  color: white;
+}
+
+.navLnk:hover {
+  color: #39386e;
+}
+
+.menu-scroll {
+  overflow-y: scroll;
+  max-height: 200px;
+}
